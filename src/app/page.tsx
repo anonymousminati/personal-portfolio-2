@@ -11,7 +11,8 @@ import {
   ProjectsSection,
   AchievementsSection,
   ContactSection,
-  Footer
+  Footer,
+  Loader
 } from '@/components'
 import { sections } from '@/data'
 
@@ -19,6 +20,8 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState('hero')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [theme, setTheme] = useState<'light' | 'dark'>('dark')
+  const [isLoading, setIsLoading] = useState(true)
+  const [showContent, setShowContent] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,10 +48,16 @@ export default function Home() {
     document.documentElement.classList.remove('light', 'dark');
     document.documentElement.classList.add(theme);
   }, [theme]);
-
   const toggleTheme = useCallback(() => {
     setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
   }, []);
+
+  const handleLoadingComplete = useCallback(() => {
+    setIsLoading(false)
+    setTimeout(() => {
+      setShowContent(true)
+    }, 100)
+  }, [])
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -58,8 +67,13 @@ export default function Home() {
     setIsMenuOpen(false)
   }
 
+  // Show loader while loading
+  if (isLoading) {
+    return <Loader onLoadingComplete={handleLoadingComplete} />
+  }
+
   return (
-    <div className={`min-h-screen ${theme === 'dark' ? 'bg-slate-950 text-white' : 'bg-background text-foreground'} relative overflow-x-hidden`}>
+    <div className={`min-h-screen ${theme === 'dark' ? 'bg-slate-950 text-white' : 'bg-background text-foreground'} relative overflow-x-hidden transition-opacity duration-1000 ${showContent ? 'opacity-100' : 'opacity-0'}`}>
       {/* Background Effects */}
       <div className="fixed inset-0 bg-gradient-to-br from-slate-950 via-blue-950/20 to-slate-950 pointer-events-none dark:from-slate-950 dark:via-blue-950/20 dark:to-slate-950 light:from-background light:via-blue-100/20 light:to-background" />
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)] pointer-events-none dark:bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)] light:bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]" />

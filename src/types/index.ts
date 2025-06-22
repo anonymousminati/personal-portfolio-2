@@ -14,6 +14,7 @@ export interface Project {
   liveUrl?: string
   githubUrl?: string
   featured: boolean
+  duration?: string
 }
 
 export interface Experience {
@@ -31,6 +32,7 @@ export interface Education {
   degree: string
   duration: string
   description: string
+  location?: string
 }
 
 export interface Achievement {
@@ -44,4 +46,27 @@ export interface Achievement {
 export interface Section {
   id: string
   label: string
+}
+
+export interface PersonalInfo {
+  name: string
+  title: string
+  email: string
+  phone: string
+  location: string
+  linkedin: string
+  github: string
+  leetcode?: string
+  hackerrank?: string
+  medium?: string
+  summary: string
+}
+
+export interface Certification {
+  id: string
+  title: string
+  issuer: string
+  location?: string
+  date: string
+  credentialUrl?: string
 }

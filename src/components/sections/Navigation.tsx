@@ -35,7 +35,7 @@ export const Navigation: React.FC<NavigationProps> = ({
           >
             <span className="relative">
               Portfolio
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg blur opacity-75" />
+              {/* <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg blur opacity-75" /> */}
             </span>
           </motion.div>
 

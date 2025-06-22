@@ -3,6 +3,7 @@ export { AnimatedCounter } from './AnimatedCounter'
 export { SkillBar } from './SkillBar'
 export { ProjectCard } from './ProjectCard'
 export { TimelineItem } from './TimeLine'
+export { Loader } from './Loader'
 
 // Sections
 export { Navigation } from './sections/Navigation'

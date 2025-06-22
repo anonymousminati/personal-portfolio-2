@@ -17,7 +17,7 @@ export const SkillsSection: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1.2 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
@@ -35,7 +35,7 @@ export const SkillsSection: React.FC = () => {
             </h3>
             <div className="space-y-6">
               {technicalSkills.map((skill, index) => (
-                <SkillBar key={skill.name} skill={skill} delay={index * 0.1} />
+                <SkillBar key={skill.name} skill={skill} delay={index * 0.05} />
               ))}
             </div>
           </div>
@@ -47,7 +47,7 @@ export const SkillsSection: React.FC = () => {
             </h3>
             <div className="space-y-6">
               {softSkills.map((skill, index) => (
-                <SkillBar key={skill.name} skill={skill} delay={index * 0.1} />
+                <SkillBar key={skill.name} skill={skill} delay={index * 0.05} />
               ))}
             </div>
           </div>

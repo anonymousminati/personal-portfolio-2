@@ -46,7 +46,7 @@ export const ProjectsSection: React.FC = () => {
         <div className="relative">
           <div 
             ref={projectsRef} 
-            className="flex overflow-x-scroll snap-x snap-mandatory scroll-smooth pb-4 gap-8 no-scrollbar"
+            className="flex overflow-x-scroll snap-x snap-mandatory scroll-smooth pb-4 gap-8 no-scrollbar py-4"
           >
             {projects.map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />

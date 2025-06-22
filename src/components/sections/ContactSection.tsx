@@ -2,7 +2,8 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, GitBranch, ExternalLink } from 'lucide-react'
+import { Mail, Phone, MapPin } from 'lucide-react'
+import { SiGithub, SiLinkedin, SiMedium } from 'react-icons/si'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
@@ -30,14 +31,13 @@ export const ContactSection: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="space-y-8"
-          >
-            <div className="flex items-center gap-4">
+          >            <div className="flex items-center gap-4">
               <div className="p-3 bg-primary/10 rounded-lg dark:bg-primary/10 light:bg-blue-100/50">
                 <Mail className="w-6 h-6 text-primary" />
               </div>
               <div>
                 <h3 className="font-semibold">Email</h3>
-                <p className="text-muted-foreground">john.doe@example.com</p>
+                <p className="text-muted-foreground">prathameshmalode.2@gmail.com</p>
               </div>
             </div>
 
@@ -47,7 +47,7 @@ export const ContactSection: React.FC = () => {
               </div>
               <div>
                 <h3 className="font-semibold">Phone</h3>
-                <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                <p className="text-muted-foreground">+91 9359227932</p>
               </div>
             </div>
 
@@ -57,38 +57,37 @@ export const ContactSection: React.FC = () => {
               </div>
               <div>
                 <h3 className="font-semibold">Location</h3>
-                <p className="text-muted-foreground">San Francisco, CA</p>
+                <p className="text-muted-foreground">Pune, Maharashtra, India</p>
               </div>
-            </div>            <Separator />
-              <div className="space-y-4">
+            </div><Separator />            <div className="space-y-4">
               <h3 className="font-semibold">Connect with me</h3>
               <div className="flex gap-4">
                 <a 
-                  href="https://github.com" 
+                  href="https://github.com/anonymousminati" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   aria-label="GitHub Profile"
-                  className="inline-flex items-center justify-center h-10 w-10 rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors"
+                  className="inline-flex items-center justify-center h-10 w-10 rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors group"
                 >
-                  <GitBranch className="w-5 h-5" />
+                  <SiGithub className="w-5 h-5 text-gray-700 group-hover:text-gray-900 dark:text-gray-300 dark:group-hover:text-white transition-colors" />
                 </a>
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://www.linkedin.com/in/prathameshmalode/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   aria-label="LinkedIn Profile"
-                  className="inline-flex items-center justify-center h-10 w-10 rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors"
+                  className="inline-flex items-center justify-center h-10 w-10 rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors group"
                 >
-                  <ExternalLink className="w-5 h-5" />
+                  <SiLinkedin className="w-5 h-5 text-blue-600 group-hover:text-blue-700 dark:text-blue-400 dark:group-hover:text-blue-300 transition-colors" />
                 </a>
                 <a 
-                  href="https://twitter.com" 
+                  href="https://medium.com/@prathameshmalode" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  aria-label="Twitter Profile"
-                  className="inline-flex items-center justify-center h-10 w-10 rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors"
+                  aria-label="Medium Profile"
+                  className="inline-flex items-center justify-center h-10 w-10 rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors group"
                 >
-                  <ExternalLink className="w-5 h-5" />
+                  <SiMedium className="w-5 h-5 text-gray-700 group-hover:text-gray-900 dark:text-gray-300 dark:group-hover:text-white transition-colors" />
                 </a>
               </div>
             </div>
@@ -114,7 +113,7 @@ export const ContactSection: React.FC = () => {
                         id="firstName"
                         type="text"
                         className="h-10 w-full px-3 py-2 bg-background rounded-md border border-input text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                        placeholder="John"
+                        placeholder="Prathamesh"
                         required
                       />
                     </div>
@@ -124,7 +123,7 @@ export const ContactSection: React.FC = () => {
                         id="lastName"
                         type="text"
                         className="h-10 w-full px-3 py-2 bg-background rounded-md border border-input text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                        placeholder="Doe"
+                        placeholder="Malode"
                         required
                       />
                     </div>
@@ -135,7 +134,7 @@ export const ContactSection: React.FC = () => {
                       id="email"
                       type="email"
                       className="h-10 w-full px-3 py-2 bg-background rounded-md border border-input text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                      placeholder="john.doe@example.com"
+                      placeholder="examplemail@gmail.com"
                       required
                     />
                   </div>

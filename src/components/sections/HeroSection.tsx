@@ -202,7 +202,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToSection }) =
           }}
         >
           <ambientLight intensity={1} />
-          <directionalLight 
+          <directionalLight  
             position={[10, 15, 10]} 
             intensity={10}
             castShadow

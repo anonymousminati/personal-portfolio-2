@@ -65,7 +65,7 @@ export const AboutSection: React.FC = () => {
             <div className="grid grid-cols-2 gap-6 pt-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">
-                  <AnimatedCounter end={7} />+
+                  <AnimatedCounter end={15} />+
                 </div>
                 <div className="text-sm text-muted-foreground">Projects Completed</div>
               </div>

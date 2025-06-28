@@ -47,48 +47,35 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
               <div className="absolute bottom-4 right-6 w-10 h-10 border border-cyan-400 rounded-full" />
             </motion.div>
             
-            <motion.div
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              transition={{ duration: 0.3 }}
-              className="relative z-10"
-            >
+            <div className="relative z-10">
               <Code className="w-16 h-16 text-blue-400/60" />
-            </motion.div>
+            </div>
           </div>
           
           {/* Hover Overlay */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileHover={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent flex items-center justify-center gap-3"
-          >            {project.liveUrl && (
-              <motion.a
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">            {project.liveUrl && (
+              <a
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium rounded-lg shadow-lg shadow-blue-500/25 transition-all duration-300 flex items-center gap-2"
+                className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium rounded-lg shadow-lg shadow-blue-500/25 transition-all duration-300 flex items-center gap-2 hover:scale-105"
               >
                 <ExternalLink className="w-4 h-4" />
                 Live Demo
-              </motion.a>
+              </a>
             )}
             {project.githubUrl && (
-              <motion.a
+              <a
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-4 py-2 bg-slate-700/80 hover:bg-slate-600 text-white text-sm font-medium rounded-lg border border-slate-600 backdrop-blur-sm transition-all duration-300 flex items-center gap-2"
+                className="px-4 py-2 bg-slate-700/80 hover:bg-slate-600 text-white text-sm font-medium rounded-lg border border-slate-600 backdrop-blur-sm transition-all duration-300 flex items-center gap-2 hover:scale-105"
               >
                 <FaGithub className="w-4 h-4" />
                 Code
-              </motion.a>
+              </a>
             )}
-          </motion.div>
+          </div>
         </div>
         
         <div className="p-6 relative z-10">

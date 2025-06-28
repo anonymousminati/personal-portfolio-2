@@ -3,7 +3,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X, Sun, Moon } from 'lucide-react'
+import Image from 'next/image'
 import { Section } from '@/types'
+import PM_LightLogo from '../../assets/images/PM_Light_logo.png'
+import PM_DarkLogo from '../../assets/images/PM_Dark_logo.png'
 
 interface NavigationProps {
   sections: Section[]
@@ -31,12 +34,16 @@ export const Navigation: React.FC<NavigationProps> = ({
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
+            className="flex items-center"
           >
-            <span className="relative">
-              Portfolio
-              {/* <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg blur opacity-75" /> */}
-            </span>
+            <Image
+              src={theme === 'dark' ? PM_DarkLogo : PM_LightLogo}
+              alt="Prathamesh Malode Logo"
+              width={120}
+              height={40}
+              className="h-8 w-auto"
+              priority
+            />
           </motion.div>
 
           {/* Desktop Navigation */}

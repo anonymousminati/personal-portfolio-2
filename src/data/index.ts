@@ -11,7 +11,19 @@ export const sections: Section[] = [
   { id: 'contact', label: 'Contact' }
 ]
 
-export const projects: Project[] = [  {
+export const projects: Project[] = [
+  {
+    id: 'taxim',
+    title: 'Taxim - AI-Powered Mathematical Animation Studio',
+    description: 'An innovative platform that transforms natural language prompts into stunning mathematical animations using Manim and Google Gemini AI. Features real-time animation rendering, intelligent error handling, session management, and a fully containerized backend with automated CI/CD deployment.',
+    image: '/images/taxim-cover.png',
+    technologies: ['Node.js', 'Express.js', 'Google Gemini AI', 'Docker', 'Manim', 'FFmpeg', 'Next.js 15', 'React 19', 'TypeScript', 'Tailwind CSS', 'Radix UI', 'GitHub Actions'],
+    githubUrl: 'https://github.com/anonymousminati/taxim-frontend',
+    liveUrl: 'https://anonymousminati.github.io/taxim-frontend/',
+    featured: true,
+    duration: 'Dec 2024 - Present'
+  },
+  {
     id: 'quantpulse',
     title: 'QuantPulse',
     description: 'A comprehensive financial analytics and risk management platform built with Python and Streamlit. It empowers traders with advanced tools for market analysis, portfolio optimization, and risk management, featuring 10+ modules, real-time data for over 100 tickers, and backtesting with 12+ technical indicators.',
